@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AccelBattery</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="button_start">Старт</string>
+    <string name="button_stop">Стоп</string>
+</resources>
