@@ -90,7 +90,7 @@ public class BatterySavingService extends IntentService {
         Notification notification =
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(isSleeping
-                                ? R.drawable.sleep
+                                ? R.drawable.sleeping
                                 : R.drawable.ic_launcher)
                         .setContentTitle("Sleeping")
                         .build();

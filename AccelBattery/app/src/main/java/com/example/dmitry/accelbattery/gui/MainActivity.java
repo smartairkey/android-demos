@@ -17,12 +17,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onEvent(Events.PhoneSleptEvent event) {
-        image.setImageResource(R.drawable.sleep_icon);
+        image.setImageResource(R.drawable.king_is_sleeping);
         isSleeping = true;
     }
 
     public void onEvent(Events.PhoneActivatedEvent event) {
-        image.setImageResource(R.drawable.ic_launcher);
+        image.setImageResource(R.drawable.king_party);
         isSleeping = false;
     }
 
