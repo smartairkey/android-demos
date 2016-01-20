@@ -1,11 +1,11 @@
-package com.example.dmitry.accelbattery.gui;
+package com.smartairkey.demos.accelbattery.gui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
-import com.example.dmitry.accelbattery.utils.Events;
-import com.example.dmitry.accelbattery.R;
+import com.smartairkey.demos.accelbattery.R;
+import com.smartairkey.demos.accelbattery.utils.Events;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

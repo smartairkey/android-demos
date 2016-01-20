@@ -1,4 +1,4 @@
-package com.example.dmitry.accelbattery;
+package com.smartairkey.demos.accelbattery;
 
 import android.app.IntentService;
 import android.app.Notification;
@@ -8,17 +8,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 
-import com.example.dmitry.accelbattery.battery_drain.WifiScanner;
-import com.example.dmitry.accelbattery.utils.Events;
-import com.example.dmitry.accelbattery.gestures.strategies.FreezeStrategy;
-import com.example.dmitry.accelbattery.gestures.GestureSensorMonitor;
-import com.example.dmitry.accelbattery.gestures.strategies.GestureStrategy;
-import com.example.dmitry.accelbattery.gestures.strategies.UnfreezeStrategy;
+import com.smartairkey.demos.accelbattery.battery_drain.WifiScanner;
+import com.smartairkey.demos.accelbattery.utils.Events;
+import com.smartairkey.demos.accelbattery.gestures.strategies.FreezeStrategy;
+import com.smartairkey.demos.accelbattery.gestures.GestureSensorMonitor;
+import com.smartairkey.demos.accelbattery.gestures.strategies.GestureStrategy;
+import com.smartairkey.demos.accelbattery.gestures.strategies.UnfreezeStrategy;
 
 import de.greenrobot.event.EventBus;
 import rx.Subscription;
-
-import static com.example.dmitry.accelbattery.utils.Events.*;
 
 /**
  * Created by dmitry on 17.01.16.
@@ -52,8 +50,6 @@ public class BatterySavingService extends IntentService {
         wifiScanner.start();
     }
 
-
-
     @Override
     protected void onHandleIntent(Intent intent) {
         makeForeground();
@@ -79,7 +75,7 @@ public class BatterySavingService extends IntentService {
     private void makeForeground() {
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.ic_launcher)
+                        .setSmallIcon(com.smartairkey.demos.accelbattery.R.drawable.ic_launcher)
                         .setContentTitle("Active");
 
         startForeground(1, builder.build());
@@ -90,7 +86,7 @@ public class BatterySavingService extends IntentService {
         Notification notification =
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(isSleeping
-                                ? R.drawable.sleeping
+                                ? R.drawable.king_is_sleeping
                                 : R.drawable.ic_launcher)
                         .setContentTitle("Sleeping")
                         .build();
@@ -107,7 +103,7 @@ public class BatterySavingService extends IntentService {
         Subscription monitoringSchedule = gestureSensorMonitor.schedule()
                 .every(60000)
                 .work(1500)
-                .setSamplingPeriod(100)
+                .samplingPeriod(100)
                 .start();
         this.monitoringSchedule = monitoringSchedule;
     }
@@ -120,7 +116,7 @@ public class BatterySavingService extends IntentService {
         Subscription monitoringSchedule = gestureSensorMonitor.schedule()
                 .every(10000)
                 .work(9500)
-                .setSamplingPeriod(100)
+                .samplingPeriod(100)
                 .start();
         this.monitoringSchedule = monitoringSchedule;
     }

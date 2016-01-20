@@ -1,4 +1,4 @@
-package com.example.dmitry.accelbattery.utils;
+package com.smartairkey.demos.accelbattery.utils;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,15 +1,9 @@
-package com.example.dmitry.accelbattery.battery_drain;
+package com.smartairkey.demos.accelbattery.battery_drain;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.net.wifi.ScanResult;
 import android.net.wifi.WifiManager;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import rx.subjects.PublishSubject;
 
 /**
  * Created by dmitry on 18.01.16.

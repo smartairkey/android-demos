@@ -1,20 +1,20 @@
-package com.example.dmitry.accelbattery.gestures.strategies;
+package com.smartairkey.demos.accelbattery.gestures.strategies;
 
-import com.example.dmitry.accelbattery.utils.CircularBuffer;
+import com.smartairkey.demos.accelbattery.utils.CircularBuffer;
 
 /**
  * Created by dmitry on 17.01.16.
  */
-public class UnfreezeStrategy extends FreezingGestureStrategy {
+public class FreezeStrategy extends FreezingGestureStrategy {
     private int movements;
 
-    protected UnfreezeStrategy() {
-        threshold = 0.5;
+    protected FreezeStrategy() {
+        threshold = 0.4;
     }
 
     @Override
     protected boolean criteriaSucceeded() {
-        return movesCounter >= movements;
+        return movesCounter <= movements;
     }
 
     public final static class Builder {
@@ -22,19 +22,19 @@ public class UnfreezeStrategy extends FreezingGestureStrategy {
         private int movements;
         private int outOf;
 
-        public UnfreezeStrategy.Builder after(int milliseconds) {
+        public FreezeStrategy.Builder after(int milliseconds) {
             afterInMs = milliseconds;
             return this;
         }
 
-        public UnfreezeStrategy.Builder hasAtLeast(int movements, int outOf) {
+        public FreezeStrategy.Builder hasNotMoreFrom(int movements, int outOf) {
             this.movements = movements;
             this.outOf = outOf;
             return this;
         }
 
-        public UnfreezeStrategy create() {
-            UnfreezeStrategy strategy = new UnfreezeStrategy();
+        public FreezeStrategy create() {
+            FreezeStrategy strategy = new FreezeStrategy();
             strategy.delayInMs = afterInMs / outOf;
             strategy.buffer = new CircularBuffer<>(outOf);
             strategy.movements = movements;

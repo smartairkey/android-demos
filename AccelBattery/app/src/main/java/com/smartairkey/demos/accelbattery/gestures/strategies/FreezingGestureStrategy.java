@@ -1,8 +1,8 @@
-package com.example.dmitry.accelbattery.gestures.strategies;
+package com.smartairkey.demos.accelbattery.gestures.strategies;
 
 import android.hardware.SensorEvent;
 
-import com.example.dmitry.accelbattery.utils.CircularBuffer;
+import com.smartairkey.demos.accelbattery.utils.CircularBuffer;
 
 /**
  * Created by dmitry on 17.01.16.

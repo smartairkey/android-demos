@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dmitry.accelbattery" >
+    package="com.smartairkey.demos.accelbattery" >
 
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
     <application
-        android:name=".AccelBatteryApplication"
+        android:name="com.smartairkey.demos.accelbattery.AccelBatteryApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".gui.MainActivity"
+            android:name="com.smartairkey.demos.accelbattery.gui.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".BatterySavingService"></service>
+        <service android:name="com.smartairkey.demos.accelbattery.BatterySavingService"></service>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.dmitry.accelbattery;
+package com.smartairkey.demos.accelbattery;
 
 import android.app.Application;
 import android.content.Intent;

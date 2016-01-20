@@ -1,4 +1,4 @@
-package com.example.dmitry.accelbattery.utils;
+package com.smartairkey.demos.accelbattery.utils;
 
 /**
  * Created by dmitry on 17.01.16.

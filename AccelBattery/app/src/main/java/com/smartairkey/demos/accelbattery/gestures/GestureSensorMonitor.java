@@ -1,4 +1,4 @@
-package com.example.dmitry.accelbattery.gestures;
+package com.smartairkey.demos.accelbattery.gestures;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -7,7 +7,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.PowerManager;
 
-import com.example.dmitry.accelbattery.gestures.strategies.GestureStrategy;
+import com.smartairkey.demos.accelbattery.gestures.strategies.GestureStrategy;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -82,7 +82,7 @@ public class GestureSensorMonitor implements SensorEventListener {
     }
 
     public interface IScheduleRunner {
-        ISamplingPeriod setSamplingPeriod(final int milliseconds);
+        ISamplingPeriod samplingPeriod(final int milliseconds);
     }
 
     public interface ISamplingPeriod {
@@ -112,7 +112,7 @@ public class GestureSensorMonitor implements SensorEventListener {
             return this;
         }
 
-        public Scheduler setSamplingPeriod(int milliseconds) {
+        public Scheduler samplingPeriod(int milliseconds) {
             samplingPeriodsInMs = milliseconds;
             return this;
         }
