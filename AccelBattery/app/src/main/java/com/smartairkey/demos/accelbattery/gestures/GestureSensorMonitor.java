@@ -123,9 +123,7 @@ public class GestureSensorMonitor implements SensorEventListener {
                 @Override
                 public void call(Long aLong) {
                     lock.acquire();
-
                     monitor.start();
-
                 }
             });
 
